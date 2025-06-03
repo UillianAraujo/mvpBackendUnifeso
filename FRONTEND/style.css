@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #2a9d8f;
+    padding: 0rem;
+    text-align: center;
+    color: white;
+}
+
+.logo1 {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: 80px;
+    display: block;
+    margin: 1 auto; 
+}
+
+.logo2 {
+    width: 150px; 
+    height: 80px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin:  10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 10%;
+}
+
+.atracoes .atracao1 {
+    display: inline-block;
+    width: 45%;
+    margin: 2%;
+    text-align: center;
+}
+
+.atracoes .atracao1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.atracoes .atracao2 {
+    display: inline-block;
+    width: 45%;
+    margin: 2%;
+    text-align: center;
+}
+
+.atracoes .atracao2 img {
+    width: 100%;
+    height: 437px;
+    border-radius: 8px;
+}
+
+.admin-dashboard form {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.admin-dashboard form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.admin-dashboard form input,
+.admin-dashboard form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f7d6d;
+}
+
+footer {
+    text-align: center;
+    padding: 0rem;
+    background-color: #2a9d8f;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

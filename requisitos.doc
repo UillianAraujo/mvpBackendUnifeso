@@ -1,0 +1,211 @@
+Requisitos Funcionais
+RF01 – Cadastro e Gerenciamento de Atrações
+Descrição: O sistema deverá permitir que os administradores cadastrem, editem e excluam atrações turísticas (como trilhas e cachoeiras) no Magé Verde Online, com informações detalhadas, como:
+
+Nome da atração
+
+Descrição
+
+Localização (com coordenadas geográficas)
+
+Imagens
+
+Nível de dificuldade (para trilhas)
+
+Duração
+
+Recomendações de segurança
+
+Critérios de Aceitação:
+
+O administrador consegue adicionar, editar ou excluir uma atração com sucesso.
+
+A atração é exibida corretamente para os visitantes no frontend.
+
+RF02 – Gerenciamento de Eventos
+Descrição: O sistema deverá permitir que os administradores cadastrem, editem e excluam eventos ecoturísticos no Magé Verde Online, com informações como:
+
+Nome do evento
+
+Descrição
+
+Data e horário
+
+Localização
+
+Imagens
+
+Critérios de Aceitação:
+
+O administrador consegue adicionar, editar ou excluir um evento com sucesso.
+
+O evento é exibido corretamente no calendário ou listagem de eventos do frontend.
+
+RF03 – Gerenciamento de Disponibilidade e Horários
+Descrição: O sistema deverá permitir que os administradores configurem e atualizem os horários de funcionamento das atrações e eventos, incluindo:
+
+Dias e horários de funcionamento para atrações.
+
+Ajustes de horário para eventos especiais ou sazonalidade.
+
+Critérios de Aceitação:
+
+O administrador consegue definir horários de funcionamento para atrações e eventos.
+
+As alterações nos horários são refletidas no frontend.
+
+RF04 – Comentários e Avaliações
+Descrição: O sistema deverá permitir que os usuários registrados comentem e avaliem as atrações e eventos, utilizando uma escala de 1 a 5 estrelas. Os visitantes poderão visualizar comentários e avaliações deixados por outros usuários.
+
+Critérios de Aceitação:
+
+Os usuários registrados podem enviar comentários e avaliações.
+
+As avaliações e os comentários são exibidos de maneira organizada e com as classificações visíveis.
+
+RF05 – Sistema de Login e Autenticação de Administradores
+Descrição: O sistema deverá permitir que os administradores acessem uma área restrita por meio de login. O sistema deverá validar as credenciais do administrador e garantir o acesso exclusivo à área administrativa.
+
+Critérios de Aceitação:
+
+O administrador deve inserir seu nome de usuário e senha.
+
+O sistema deve validar as credenciais e conceder acesso à área administrativa.
+
+O administrador deve ser redirecionado para a área administrativa após o login bem-sucedido.
+
+RF06 – Exibição de Atrações e Eventos para Visitantes
+Descrição: O sistema deverá permitir que os visitantes acessem as informações sobre atrações e eventos, com filtros e buscas para facilitar a navegação.
+
+Critérios de Aceitação:
+
+O visitante pode acessar informações detalhadas sobre as atrações e eventos.
+
+O visitante pode aplicar filtros de pesquisa por categoria, localização e data.
+
+O sistema deve exibir corretamente as informações no frontend, incluindo imagens e descrições.
+
+RF07 – Publicação de Novidades
+Descrição: O sistema deverá permitir que os administradores publiquem atualizações sobre novidades e eventos especiais, com textos e imagens.
+
+Critérios de Aceitação:
+
+O administrador pode publicar novidades e eventos especiais.
+
+As novidades são visíveis para os visitantes na seção de notícias.
+
+Requisitos Não-Funcionais
+RNF01 – Desempenho
+Descrição: O sistema deve ser capaz de lidar com grande volume de acessos simultâneos sem perda de performance significativa.
+
+Critérios de Aceitação:
+
+O tempo de resposta para carregar a página principal não deve ultrapassar 2 segundos.
+
+O sistema deve ser capaz de suportar ao menos 500 usuários simultâneos sem degradar a experiência do usuário.
+
+RNF02 – Escalabilidade
+Descrição: O sistema deve ser escalável para permitir a adição de mais atrações, eventos e funcionalidades sem impactar negativamente a performance.
+
+Critérios de Aceitação:
+
+O sistema deve permitir que novas funcionalidades sejam adicionadas com mínima reconfiguração do sistema.
+
+O sistema deve permitir que novas atrações e eventos sejam adicionados sem impactar o desempenho.
+
+RNF03 – Segurança
+Descrição: O sistema deve garantir a segurança dos dados, protegendo as informações pessoais dos usuários e administradores. Além disso, o sistema deverá proteger contra ataques comuns como SQL Injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF) e Força Bruta.
+
+Critérios de Aceitação:
+
+As senhas dos administradores devem ser armazenadas de forma criptografada utilizando bcrypt ou tecnologia similar.
+
+O sistema deve utilizar HTTPS para garantir a comunicação segura entre o frontend e o backend.
+
+O sistema deve realizar a validação das entradas do usuário para evitar ataques de SQL Injection e XSS.
+
+RNF04 – Usabilidade
+Descrição: O sistema deve ser fácil de usar, com uma interface intuitiva tanto para administradores quanto para visitantes. A experiência do usuário deve ser simples e eficiente.
+
+Critérios de Aceitação:
+
+O design do site deve ser responsivo e funcional em dispositivos móveis e desktops.
+
+O fluxo de navegação deve ser claro e intuitivo, com menus fáceis de encontrar.
+
+O sistema deve seguir as diretrizes de usabilidade e design para garantir uma boa experiência do usuário.
+
+RNF05 – Disponibilidade
+Descrição: O sistema deve ser altamente disponível, com um tempo de inatividade mínimo para manutenção e atualizações.
+
+Critérios de Aceitação:
+
+O sistema deve estar disponível 99% do tempo (com exceção de períodos de manutenção programada).
+
+O tempo de inatividade para manutenção não deve ultrapassar 2 horas por mês.
+
+RNF06 – Compatibilidade entre Navegadores
+Descrição: O sistema deve ser compatível com os principais navegadores da web, como Google Chrome, Mozilla Firefox, Microsoft Edge e Safari.
+
+Critérios de Aceitação:
+
+O sistema deve funcionar corretamente em versões recentes de navegadores populares.
+
+O design e os recursos devem ser renderizados corretamente em todos os navegadores compatíveis.
+
+RNF07 – Backup e Recuperação de Dados
+Descrição: O sistema deve ter mecanismos de backup para garantir a integridade e recuperação dos dados em caso de falhas ou perda de dados.
+
+Critérios de Aceitação:
+
+O sistema deve realizar backups automáticos e regulares (diários ou semanais) dos dados do banco de dados.
+
+O processo de recuperação de dados deve ser bem documentado e testado.
+
+RNF08 – Acessibilidade
+Descrição: O sistema deve ser acessível a pessoas com deficiências, atendendo às diretrizes de acessibilidade da web (WCAG).
+
+Critérios de Aceitação:
+
+O sistema deve ser compatível com leitores de tela.
+
+O sistema deve permitir navegação por teclado, com todos os componentes interativos acessíveis sem o uso de um mouse.
+
+O contraste entre o texto e o fundo deve ser adequado para pessoas com deficiência visual.
+
+Resumo dos Requisitos
+Requisitos Funcionais:
+
+Cadastro de atrações e eventos.
+
+Gerenciamento de horários e disponibilidade.
+
+Sistema de comentários e avaliações.
+
+Autenticação de administradores.
+
+Exibição de atrações e eventos para visitantes.
+
+Publicação de novidades e atualizações.
+
+Requisitos Não-Funcionais:
+
+Desempenho e escalabilidade para suportar tráfego crescente.
+
+Segurança robusta para proteção de dados.
+
+Usabilidade com foco em uma experiência intuitiva.
+
+Alta disponibilidade e backup para garantir continuidade.
+
+Compatibilidade entre navegadores e acessibilidade.
+
+Esses requisitos garantem a criação de um sistema eficiente, seguro e fácil de usar, atendendo tanto as necessidades dos administradores quanto dos visitantes.
+
+
+
+
+
+
+
+

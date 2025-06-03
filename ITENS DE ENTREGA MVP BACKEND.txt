@@ -1,0 +1,54 @@
+ETAPAS DO MVP
+Por onde começar?
+-Definição do escopo do sistema
+-Levantamento de entidades e dados
+-Criação da API e dos endpoints
+-Integração com banco de dados
+-Implementação de autenticação
+-Testes com ferramentas como Postman
+
+
+
+ITENS DE ENTREGA MVP BACKEND
+
+- ESCOPO (E FORA DO ESCOPO)
+-REQUISITOS FUNCIONAIS E NÃO-FUNCIONAIS
+-CODIGO-FONTE NO GITHUB
+-README
+-ESTRUTURA DE DIRETÓRIOS CLARA
+-PITCH
+
+ESCOPO
+É oque está dentro dos limites do projeto, é tudo oque o MVP vai entregar. FORA DO ESCOPO são funcionalidades que não vou incluir nesse momento, mas sim futuramente.
+
+REQUISITOS FUNCIONAIS
+São aquelas ações que o sistema precisa executar, ex: cadastrar, buscar, deletar, atualizar...
+
+REQUISITOS NÃO-FUNCIONAIS
+Características que diz respeita a qualidade do sistema, ex: segurança, desempenho, escalabilidade, tempo de resposta...
+
+EX.: 
+o sistema deve responder em até 2 segundos (não-funcional)
+
+o sistema deve permitir o login de usuários (funcional)
+
+QUANDO FOR APONTAR O REQUISITOS FUNCIONAIS E NÃO-FUNCIONAIS, TEM QUE MOSTRAR NÃO SÓ O QUE O SISTEMA FAZ, MAS COMO ELE SE COMPORTA.
+
+README
+Informar... (uma carta de apresentação do sistema)
+Oque é esse projeto?
+Pra quê ele serve? 
+Como rodar o sistema?
+Quais as principais funcionalidades?
+
+
+_____________________________________________________________________________
+
+
+DESAFIO 
+SOLUÇÃO PROBLEMA #2: Circuito Magé Verde
+
+Desenvolver uma solução que conecte as belezas naturais da cidade com os cidadãos e visitantes.
+
+
+(funcionalidade = endpoints)

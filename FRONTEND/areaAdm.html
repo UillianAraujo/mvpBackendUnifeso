@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Administrativa - Magé Verde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Área Administrativa - Magé Verde</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="trilhas.html">Trilhas</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin-dashboard">
+        <h2>Gerenciar Atrações e Eventos</h2>
+        <form action="/submit" method="POST">
+            <label for="evento">Novo Evento:</label>
+            <input type="text" id="evento" name="evento" required>
+            <label for="data">Data do Evento:</label>
+            <input type="date" id="data" name="data" required>
+            <button type="submit">Adicionar Evento</button>
+        </form>
+
+        <h3>Atualizações de Trilhas</h3>
+        <form action="/submit" method="POST">
+            <label for="trilha">Adicionar Trilha:</label>
+            <input type="text" id="trilha" name="trilha" required>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+            <button type="submit">Adicionar Trilha</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Magé Verde Online | Todos os direitos reservados</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

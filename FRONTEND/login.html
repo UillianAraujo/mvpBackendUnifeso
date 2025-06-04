@@ -21,15 +21,10 @@
 
     <section class="admin-dashboard">
         <h2>Entrar</h2>
-        <form id="loginForm">
-            <label for="username">Nome de Usuário:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-            
+        <form action="/submit" method="POST">
+            <input type="text" name="username" placeholder="Usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
             <button type="submit">Entrar</button>
-        </form>
 
         <p>Não tem uma conta? <a href="registro.html">Cadastre-se</a></p>
     </section>

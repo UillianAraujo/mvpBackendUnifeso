@@ -1,28 +1,29 @@
-from Flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'UILLIANARAUJO'
-
-
+app.config['SECRET_KEY'] = 'MVPUILLIAuiNARAUJO'
 @app.route('/')
-def home():
+def inicio():
     return render_template('inicio.html')
 
-#Rota do loginUsuario
+#rota do longinUsuário
 
 @app.route('/loginUsuario', methods=['POST'])
-def loginUsuario():
-
+def longinUsuario():
     nome = request.form.get('username')
     senha = request.form.get('password')
 
-    print(nome, senha)
+
     return redirect('/loginUsuario')
 
-#Rota do loginAdmin
+#rota do longinAdmin
 
+@app.route('/loginAdmin', methods=['POST'])
+def longinAdmin():
+    nome = request.form.get('username')
+    senha = request.form.get('password')
 
-
+    return redirect('/loginAdmin')
 
 
 

@@ -10,7 +10,7 @@ def inicio():
 #rota do longinUsuário
 
 @app.route('/loginUsuario', methods=['POST'])
-def longinUsuario():
+def loginUsuario():
     nome = request.form.get('username')
     senha = request.form.get('password')
 
@@ -19,12 +19,12 @@ def longinUsuario():
 
 #rota do longinAdmin
 
-@app.route('/loginAdmin', methods=['POST'])
-def longinAdmin():
+@app.route('/loginAdm', methods=['POST'])
+def loginAdm():
     nome = request.form.get('username')
     senha = request.form.get('password')
 
-    return redirect('/loginAdmin')
+    return redirect('/loginAdm')
 
 
 

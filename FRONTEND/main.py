@@ -1,30 +1,15 @@
-from flask import Flask, render_template, redirect, request
+# Na main: importar o FLASK
+# Criar as bases do site
+# Criar sistemas de autenticação
+# Criar banco de dados
+# ...
+
+from flask import Flask
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'MVPUILLIAUiNARAUJO'
+app.config['SECRET_KEY'] = 'MVPUILLIANARAUJO'
 
-@app.route('/')
-def inicio():
-    return render_template('inicio.html')
-
-#rota do longinUsuário
-
-@app.route('/loginUsuario', methods=['POST'])
-def loginUsuario():
-    nome = request.form.get('username')
-    senha = request.form.get('password')
-
-
-    return redirect('/loginUsuario')
-
-#rota do longinAdmin
-
-@app.route('/loginAdm', methods=['POST'])
-def loginAdm():
-    nome = request.form.get('username')
-    senha = request.form.get('password')
-
-    return redirect('/loginAdm')
+from routes import *
 
 
 

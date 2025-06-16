@@ -29,6 +29,12 @@ header {
     margin: 0;
 }
 
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 header h1 {
     margin: 0;
 }
@@ -75,7 +81,7 @@ section {
 
 .atracoes .atracao2 img {
     width: 100%;
-    height: 437px;
+    height: 283px;
     border-radius: 8px;
 }
 

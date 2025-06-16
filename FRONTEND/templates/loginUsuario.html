@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Magé Verde Online</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
         <h1>Login - Magé Verde</h1>
-        <nav>
-            <ul>
-                <li><a href="inicio.html">Início</a></li>
-                <li><a href="trilhas.html">Trilhas</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="loginAdm.html">Admintração</a></li>
-            </ul>
-        </nav>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="inicio.html">Início</a></li>
+                    <li><a href="trilhas.html">Trilhas</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="loginAdm.html">Admintração</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="admin-dashboard">

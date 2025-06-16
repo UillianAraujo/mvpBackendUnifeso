@@ -6,20 +6,17 @@ from flask import render_template, redirect, request, url_for
 def inicio():
     return render_template('inicio.html')
 
-#rota do longinUsuário
-
-@app.route('/loginUsuario', methods=['POST'])
+#rota do longinUsuario
+@app.route('/loginUsuario', methods=['GET'])
 def loginUsuario():
-    nome = request.form.get('username')
-    senha = request.form.get('password')
+    return render_template('loginUsuario.html')
 
-    return redirect('/tilhasUsuario')
-
-#rota do loginAdmin
-
-@app.route('/loginAdm', methods=['POST'])
+#rota do longinAdm
+@app.route('/loginAdm', methods=['GET'])
 def loginAdm():
-    nome = request.form.get('username')
-    senha = request.form.get('password')
+    return render_template('loginAdm.html')
 
-    return redirect('/areaAdm')
+#rota da areaAdm
+@app.route('/areaAdm', methods=['GET'])
+def areaAdm():
+    return render_template('areaAdm.html')

@@ -20,3 +20,8 @@ def loginAdm():
 @app.route('/areaAdm', methods=['GET'])
 def areaAdm():
     return render_template('areaAdm.html')
+
+#rota dinâmica perfilUsuario
+@app.route('/perfil/<usuario>')
+def perfil():
+    return render_template('perfil.html')

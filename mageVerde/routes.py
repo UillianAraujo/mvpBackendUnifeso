@@ -23,5 +23,5 @@ def areaAdm():
 
 #rota dinâmica perfilUsuario
 @app.route('/perfil/<usuario>')
-def perfil():
-    return render_template('perfil.html')
+def perfil(usuario):
+    return render_template('perfil.html, usuario=usuario)')

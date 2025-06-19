@@ -1,6 +1,6 @@
 from mageVerde import app
 from flask import render_template, redirect, request, url_for
-
+from flask_login import login_required
 
 @app.route('/')
 def inicio():
@@ -23,5 +23,6 @@ def areaAdm():
 
 #rota dinâmica perfilUsuario
 @app.route('/perfil/<usuario>')
+@login_required
 def perfil(usuario):
     return render_template('perfil.html, usuario=usuario)')

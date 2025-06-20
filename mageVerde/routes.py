@@ -10,7 +10,7 @@ def inicio():
 #rota do longinUsuario
 @app.route('/loginUsuario', methods=['GET', 'POST'])
 def loginUsuario():
-    return render_template('loginUsuario.html')
+    return render_template('loginUsuario.html', form=LoginUsuarioForm())
 
 #rota do longinAdm
 @app.route('/loginAdm', methods=['GET', 'POST'])

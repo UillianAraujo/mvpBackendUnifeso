@@ -24,7 +24,17 @@
     <section class="admin-dashboard">
         <h2>Entrar</h2>
         <form action="/loginUsuario" method="POST">
-            <input type="text" name="username" placeholder="Usuário" required>
+            {{ form.csrf_token }}
+
+            {{ form.email.label() }} 
+            {{ form.email() }}
+
+            {{ form.senha.label() }} 
+            {{ form.senha() }}
+
+            {{ form.botaoConfirmacao()}}
+
+            <input type="text" name="username" placeholder="E-mail" required>
             <input type="password" name="password" placeholder="Senha" required>
             <button type="submit">Entrar</button>
         </form>    

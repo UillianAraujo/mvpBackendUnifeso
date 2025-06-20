@@ -10,7 +10,9 @@ class LoginUsuarioForm(FlaskForm):
     botaoConfirmacao = SubmitField('Fazer Login')
 
 class LoginAdmForm(FlaskForm):
-    pass
+    matricula = StringField('Matrícula', validators=[DataRequired(), Email()])
+    senha = PasswordField('Senha', validators=[DataRequired(), Length(min=6, max=20)])
+    botaoConfirmacao = SubmitField('Fazer Login')
 
 # não pretendo criar um template/formulário para cadastrar usuários.
 class CadastroForm(FlaskForm):

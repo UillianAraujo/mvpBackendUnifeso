@@ -1,18 +1,19 @@
 from mageVerde import app
 from flask import render_template, redirect, request, url_for
 from flask_login import login_required
+from mageVerde.forms import LoginUsuarioForm, LoginAdmForm, CadastroForm, AreaAdmForm
 
 @app.route('/')
 def inicio():
     return render_template('inicio.html')
 
 #rota do longinUsuario
-@app.route('/loginUsuario', methods=['GET'])
+@app.route('/loginUsuario', methods=['GET', 'POST'])
 def loginUsuario():
     return render_template('loginUsuario.html')
 
 #rota do longinAdm
-@app.route('/loginAdm', methods=['GET'])
+@app.route('/loginAdm', methods=['GET', 'POST'])
 def loginAdm():
     return render_template('loginAdm.html')
 

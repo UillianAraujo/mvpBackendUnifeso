@@ -15,7 +15,7 @@ def loginUsuario():
 #rota do longinAdm
 @app.route('/loginAdm', methods=['GET', 'POST'])
 def loginAdm():
-    return render_template('loginAdm.html')
+    return render_template('loginAdm.html', form=LoginAdmForm())
 
 #rota da areaAdm
 @app.route('/areaAdm', methods=['GET'])

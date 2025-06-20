@@ -10,7 +10,7 @@ class LoginUsuarioForm(FlaskForm):
     botaoConfirmacao = SubmitField('Fazer Login')
 
 class LoginAdmForm(FlaskForm):
-    matricula = StringField('Matrícula', validators=[DataRequired(), Email()])
+    matricula = StringField('Nº Matrícula', validators=[DataRequired(), Email()])
     senha = PasswordField('Senha', validators=[DataRequired(), Length(min=6, max=20)])
     botaoConfirmacao = SubmitField('Fazer Login')
 

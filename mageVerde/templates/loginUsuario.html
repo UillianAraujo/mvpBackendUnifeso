@@ -24,15 +24,16 @@
     <section class="admin-dashboard">
         <h2>LOGIN</h2>
         <form action="/loginUsuario" method="POST">
+            <!--sempre que trazer um formulário para o html tem que usar 'csrf_token' -->
             {{ form.csrf_token }}
-
+            <!--é uma trava de segurança para alguns possíveis ataques
+            ele garante que as informações sejam validadas antes de ir para o servidor -->
             {{ form.email.label(placeholder="E-mail", required=True) }} 
             {{ form.email() }}
-
+            <!--label é o nome do campo, o required é para dizer que o campo é obrigatório -->
             {{ form.senha.label() }} 
             {{ form.senha() }}
 
-            {{ form.botaoConfirmacao()}}
 
             <input type="text" name="username" placeholder="E-mail" required>
             <input type="password" name="password" placeholder="Senha" required>

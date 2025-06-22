@@ -17,7 +17,7 @@ class LoginAdmForm(FlaskForm):
 # não pretendo criar um template/formulário para cadastrar usuários.
 class CadastroForm(FlaskForm):
     email = StringField('E-mail', validators=[DataRequired(), Email()])
-    username = StringField('Nome de Usuário', validators=[DataRequired()])
+    username = StringField('Nome', validators=[DataRequired()])
     senha = PasswordField('Senha', validators=[DataRequired(), Length(min=6, max=20)])
     confirmarSenha = PasswordField('Confirmar Senha', validators=[DataRequired(), EqualTo('senha')])
     botaoConfirmacao = SubmitField('Cadastrar')

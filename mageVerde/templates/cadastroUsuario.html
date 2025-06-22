@@ -1,0 +1,33 @@
+{% extends 'loginUsuario.html' %}
+
+{% block titulo %}
+
+<h1>Cadastro de Usuário - Magé Verde Online</h1>
+{% endblock %}
+
+
+{% block formulario %}
+<h2>Preencha os campos abaixo para criar uma nova conta.</h2>
+<form action="/cadastroUsuario" method="POST">
+    {{ form.csrf_token }}
+    
+    {{ form.username.label(placeholder="Nome Completo", required=True) }}
+    {{ form.username() }}
+<br>
+    {{ form.email.label(placeholder="E-mail", required=True) }}
+    {{ form.email() }}
+<br>
+    {{ form.senha.label(placeholder="Senha", required=True) }}
+    {{ form.senha() }}
+
+    {{ form.confirmarSenha.label(placeholder="Confirmar Senha", required=True) }}
+    {{ form.confirmarSenha() }}
+<br>     
+
+    <button type="submit">Cadastrar</button>
+
+
+
+
+  <p>Já tem uma conta? <a href="/loginUsuario">Faça login</a></p>
+{% endblock %}

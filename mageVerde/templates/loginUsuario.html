@@ -8,7 +8,9 @@
 </head>
 <body>
     <header>
+        {% block titulo %}
         <h1>Login - Magé Verde</h1>
+        {% endblock %}
         <div class="menu">
             <nav>
                 <ul>
@@ -20,7 +22,7 @@
             </nav>
         </div>
     </header>
-
+    {% block formulario %}
     <section class="admin-dashboard">
         <h2>LOGIN</h2>
         <form action="/loginUsuario" method="POST">
@@ -39,10 +41,11 @@
             <input type="password" name="password" placeholder="Senha" required>
             <button type="submit">Entrar</button>
         </form>    
+        
 
         <p>Não tem uma conta? <a href="registro.html">Cadastre-se</a></p>
     </section>
-
+    {% endblock %}
     <footer>
         <p>&copy; 2025 Magé Verde Online | Todos os direitos reservados</p>
     </footer>

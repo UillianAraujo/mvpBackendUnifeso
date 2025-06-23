@@ -1,6 +1,6 @@
 from mageVerde import app, database, Bcrypt
 from flask import render_template, redirect, request, url_for
-from flask_login import login_required, logout_user, login_user
+from flask_login import login_required, logout_user, login_user, current_user
 from mageVerde.forms import LoginUsuarioForm, LoginAdmForm, CadastroForm, AreaAdmForm
 from mageVerde.models import Usuario
 
@@ -61,3 +61,10 @@ def areaAdm():
 @login_required
 def perfil(usuario):
     return render_template('trilhasUsuario.html', usuario=usuario)
+
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('inicio'))

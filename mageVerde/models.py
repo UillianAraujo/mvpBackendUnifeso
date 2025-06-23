@@ -9,7 +9,7 @@ def load_usuario(id_usuario):
     return Usuario.query.get(int(id_usuario))
 
 
-class Usuario(database.Model):
+class Usuario(database.Model, UserMixin):
     id = database.Column(database.Integer, primary_key=True)
     username = database.Column(database.String(50), nullable=False)
     email = database.Column(database.String(50), unique=True, nullable=False)

@@ -34,7 +34,7 @@ def loginUsuario():
         usuario = Usuario.query.filter_by(email=form.email.data).first()  #busca o usuário pelo email
         if usuario and Bcrypt.check_password_hash(usuario.senha, form.senha.data):  # Verifica se a senha está correta
             login_user(usuario)
-            return render_template(url_for('trilhasUsuario.html', usuario=usuario.username))  #redireciona para a página de trilhas do usuário
+            return render_template('trilhasUsuario.html', usuario=usuario.username)  #redireciona para a página de trilhas do usuário
     return render_template('loginUsuario.html', form=LoginUsuarioForm())
 
 

@@ -1,0 +1,6 @@
+# sempre que trazer um formulário para o html tem que usar: 
+{{ form.csrf_token  }} 
+# é uma trava de segurança para alguns possíveis ataques
+# ele garante que as informações sejam validadas antes de ir para o servidor
+
+- Na página cacastroUsuario.html usei o sistema de {% block %} para reaproveitar partes das paginas já criadas.

@@ -14,7 +14,6 @@ def inicio():
 @app.route('/cadastroUsuario', methods=['GET', 'POST'])
 def cadastroUsuario():
     form = CadastroForm()
-
     if form.validate_on_submit():
         senha= Bcrypt.generate_password_hash(form.senha.data) #criptografia da senha
         usuario=Usuario(
@@ -24,7 +23,6 @@ def cadastroUsuario():
         database.session.add(usuario)
         database.session.commit()
         return redirect(url_for('trilhasUsuario', usuario=usuario.username))  #redireciona para o perfil do usuário após o cadastro
-    
     return render_template('cadastroUsuario.html', form=CadastroForm())
 
 
@@ -34,16 +32,9 @@ def loginUsuario():
     form= LoginUsuarioForm()
     if form.validate_on_submit(): # validade_on_submit() verifica se o formulário foi enviado e se os dados são válidos
         usuario = Usuario.query.filter_by(email=form.email.data).first()  #busca o usuário pelo email
-
         if usuario and Bcrypt.check_password_hash(usuario.senha, form.senha.data):  # Verifica se a senha está correta
-
-            if usuario.status == 'ativo':
-                login_user(usuario)
-                return render_template(url_for('trilhasUsuario.html', usuario=usuario.username))  #redireciona para a página de trilhas do usuário
-            
-        else:
-            return render_template('loginUsuario.html', form=form, error='E-mail ou senha incorretos.')
-        
+            login_user(usuario)
+            return render_template(url_for('trilhasUsuario.html', usuario=usuario.username))  #redireciona para a página de trilhas do usuário
     return render_template('loginUsuario.html', form=LoginUsuarioForm())
 
 

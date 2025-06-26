@@ -68,4 +68,4 @@ def perfil(usuario):
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('inicio'))
+    return redirect(url_for('loginUsuario'))

@@ -1,1 +1,58 @@
-<a href="{{ url_for('logout') }}">SAIR</a></p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Trilha - Magé Verde Online</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <h1>Magé Verde</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('inicio') }}">Início</a></li>
+          <li><a href="trilhasUsuario.html">Trilhas</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="admin-dashboard">
+    <h2>Agendar Trilha</h2>
+    <form action="/submit" method="POST">
+      {{ form.csrf_token }}
+
+     
+        {{ form.trilha.label }}
+        {{ form.trilha() }}
+     
+
+      
+        {{ form.data.label }}
+        {{ form.data(type="date") }}
+      
+
+      
+        {{ form.horario.label }}
+        {{ form.horario(type="time") }}
+     
+
+        <button type="submit">Agendar</button>
+        
+        <button type="reset">Limpar</button>
+        <br>
+        <br>
+        
+    </form>
+    <button href="{{ url_for('logout') }}">SAIR</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Magé Verde Online | Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
+

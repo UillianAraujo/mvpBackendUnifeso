@@ -1,6 +1,6 @@
 # criar os formularios do site
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, PasswordField, SubmitField, SelectField, DateField, TimeField
 from wtforms.validators import DataRequired, Email, EqualTo, Length, ValidationError
 from mageVerde.models import Usuario
 
@@ -31,3 +31,9 @@ class CadastroForm(FlaskForm):
 class AreaAdmForm():
     pass
 
+class AgendarTrilhasForm(FlaskForm):
+    trilha = SelectField('Trilhas', choices=[('1','Parque Nacional da Serra dos Órgãos'), ('2','Parque Municipal Barão de Mauá')],
+                          coerce=int, validators=[DataRequired()])
+    data = DateField('Data', format='%D/%m/%y', validators=[DataRequired()])
+    horario = TimeField('Horário', format='%H:%M', validators=[DataRequired()])
+    botaoConfirmacao = SubmitField('Agendar')

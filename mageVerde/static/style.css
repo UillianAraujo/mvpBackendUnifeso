@@ -81,7 +81,7 @@ section {
 
 .atracoes .atracao2 img {
     width: 100%;
-    height: 283px;
+    height: 435px;
     border-radius: 8px;
 }
 
@@ -90,7 +90,7 @@ section {
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 2rem;
-    max-width: 900px;
+    max-width: 9000px;
     width: 100%;
     margin: 0 auto;
 }

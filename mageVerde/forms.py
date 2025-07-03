@@ -35,5 +35,5 @@ class AgendarTrilhasForm(FlaskForm):
     trilha = SelectField('Trilhas', choices=[('1','Parque Nacional da Serra dos Órgãos'), ('2','Parque Municipal Barão de Mauá')],
                           coerce=int, validators=[DataRequired()])
     data = DateField('Data', format='%D/%m/%y', validators=[DataRequired()])
-    horario = TimeField('Horário', format='%H:%M', validators=[DataRequired()])
+    horario = TimeField('Horário', format='%H', validators=[DataRequired()])
     botaoConfirmacao = SubmitField('Agendar')

@@ -62,8 +62,14 @@ def areaAdm():
 @login_required
 def perfil(usuario):
     form = AgendarTrilhasForm()
+    mensagem = None
+
+    if form.validate_on_submit():
+        # Aqui você pode adicionar a lógica para agendar trilhas
+        # Por exemplo, salvar a trilha agendada no banco de dados
+        mensagem = "Trilha agendada com sucesso!"
     
-    return render_template('trilhasUsuario.html', usuario=usuario, form=form)
+    return render_template('trilhasUsuario.html', usuario=usuario, form=form, mensagem=mensagem)
 
 
 @app.route('/logout')

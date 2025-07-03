@@ -8,8 +8,11 @@
 </head>
 <body>
   <header>
-    <div class="menu">
+    <div class="logo1">
+            <img src="{{ url_for('static', filename='imagens/logo mage1.png') }}" alt="Logo Magé Verde">
+        </div>
       <h1>Magé Verde</h1>
+      <div class="menu">
       <nav>
         <ul>
           <li><a href="{{ url_for('inicio') }}">Início</a></li>
@@ -18,11 +21,19 @@
         </ul>
       </nav>
     </div>
+    <div class="logo2">
+            <img src="{{ url_for('static', filename='imagens/logo mage2.png') }}" alt="Fundação Edu e Cul de Magé">
+        </div>
   </header>
 
   <section class="admin-dashboard">
     <h2>Agendar Trilha</h2>
-    <form action="/submit" method="POST">
+    {% if mensagem %}
+        <div id="mensagem-confirmacao" class="mensagem-sucesso">{{ mensagem }}</div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('perfil', usuario=usuario) }}">
+
       {{ form.csrf_token }}
 
      
@@ -40,19 +51,41 @@
         {{ form.horario(type="time") }}
      
 
-        <button type="submit">Agendar</button>
+         {{ form.botaoConfirmacao() }}
         
-        <button type="reset">Limpar</button>
+    
         <br>
         <br>
         
     </form>
     <button href="{{ url_for('logout') }}">SAIR</button>
+
   </section>
 
   <footer>
     <p>&copy; 2025 Magé Verde Online | Todos os direitos reservados</p>
   </footer>
+  
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const mensagem = document.getElementById('mensagem-confirmacao');
+
+    if (mensagem) {
+      
+      mensagem.style.opacity = 0;
+      mensagem.style.transition = 'opacity 0.8s ease-in-out';
+      setTimeout(() => mensagem.style.opacity = 1, 100);
+
+      
+      setTimeout(() => {
+        mensagem.style.opacity = 0;
+        setTimeout(() => mensagem.remove(), 800);
+      }, 8000); 
+    }
+  });
+</script>
+
+
 </body>
 </html>
 
